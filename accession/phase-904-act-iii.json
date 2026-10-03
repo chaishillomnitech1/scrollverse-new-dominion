@@ -1,0 +1,14 @@
+{
+  "accession_id": "ND-ACTIII-POSTER-001",
+  "source_type": "media",
+  "title": "Act III: Intervention Necessary / With Water, But With Fire",
+  "creator": "first-party ScrollVerse New Dominion pack",
+  "phase_tag": "904",
+  "status": "EVOLVE",
+  "local_paths": ["act-iii/poster-pack.md"],
+  "sha256": [],
+  "narrative_link": "Who Validates / Prologue — intervention no longer optional",
+  "frequency_lock": "963 Hz (brand language, not a measured guarantee)",
+  "export": {"format": "JSON", "browser_local_only": true},
+  "notes": "RECOVER: pull the local artifact and hash it. Nothing leaves the device until a sealed record is handed to Planning Atlas. This desk does not publish. sha256 left empty until a local hash is computed."
+}
