@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ACT III — Intervention Necessary</title>
+<style>
+  :root { --gold: #d4b06a; --gold-bright: #f3e2b3; --cyan: #3fd6d0; --orange: #e07a2f; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #050506; color: var(--gold-bright); }
+  body { min-height: 100vh; display: grid; place-items: center; font-family: Palatino, "Times New Roman", serif; }
+  .sheet {
+    width: min(720px, 94vw); aspect-ratio: 2 / 3; position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 70% at 50% 18%, rgba(212,176,106,0.16), transparent 42%),
+      radial-gradient(80% 50% at 12% 62%, rgba(63,214,208,0.22), transparent 50%),
+      radial-gradient(80% 50% at 88% 62%, rgba(224,122,47,0.24), transparent 50%),
+      linear-gradient(180deg, #0c0e14 0%, #07080b 55%, #050506 100%);
+    border: 1px solid rgba(212,176,106,0.45);
+    box-shadow: 0 0 0 8px #050506, 0 30px 80px rgba(0,0,0,0.55);
+  }
+  .eye { position: absolute; top: 7%; left: 50%; transform: translateX(-50%); width: 92px; height: 58px; border: 2px solid var(--gold); border-radius: 50%; display: grid; place-items: center; }
+  .eye i { width: 28px; height: 28px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #9ff7e8, #0e7a62 55%, #06241c); box-shadow: 0 0 0 3px #0b0d12, 0 0 0 5px var(--gold); }
+  header { position: absolute; top: 18%; width: 100%; text-align: center; padding: 0 8%; }
+  h1 { margin: 0; font-weight: 500; letter-spacing: 0.18em; font-size: clamp(22px, 4.2vw, 34px); color: var(--gold-bright); text-shadow: 0 1px 0 #6a5224; }
+  .sub { margin-top: 14px; font-size: clamp(14px, 2.4vw, 20px); letter-spacing: 0.22em; }
+  .sub span:first-child { color: var(--cyan); }
+  .sub span:last-child { color: var(--orange); }
+  .throne { position: absolute; left: 50%; top: 42%; transform: translateX(-50%); width: 46%; text-align: center; }
+  .figure { width: 120px; height: 168px; margin: 0 auto 8px; border: 1px solid rgba(212,176,106,0.55); background: linear-gradient(180deg, #1a1c24, #0c0e12); clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); }
+  .sash { height: 8px; margin: -18px auto 0; width: 70%; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .caption { margin-top: 10px; letter-spacing: 0.16em; font-size: 11px; color: rgba(243,226,179,0.75); }
+  .surge, .flame { position: absolute; bottom: 18%; width: 28%; height: 38%; }
+  .surge { left: 4%; background: radial-gradient(circle at 70% 80%, rgba(63,214,208,0.55), transparent 68%); }
+  .flame { right: 4%; background: radial-gradient(circle at 30% 80%, rgba(224,122,47,0.6), transparent 68%); }
+  footer { position: absolute; bottom: 5%; width: 100%; text-align: center; letter-spacing: 0.14em; font-size: 11px; color: var(--gold); }
+  .tag { position: absolute; bottom: 12%; width: 100%; text-align: center; font-size: clamp(13px, 2.2vw, 18px); }
+  .ankh { font-size: 22px; display: block; margin-bottom: 8px; }
+  .note { width: min(720px, 94vw); margin: 18px auto 40px; color: #b7b1a4; font-size: 14px; line-height: 1.5; }
+</style>
+</head>
+<body>
+  <main>
+    <section class="sheet" aria-label="Act III poster">
+      <div class="eye" aria-hidden="true"><i></i></div>
+      <header>
+        <h1>ACT III: INTERVENTION NECESSARY</h1>
+        <p class="sub"><span>WITH WATER</span> · <span>BUT WITH FIRE</span></p>
+      </header>
+      <div class="surge" aria-hidden="true"></div>
+      <div class="flame" aria-hidden="true"></div>
+      <div class="throne">
+        <div class="figure" aria-hidden="true"></div>
+        <div class="sash" aria-hidden="true"></div>
+        <p class="caption">ELDER · WHITE ROBE · GOLD SASH</p>
+      </div>
+      <p class="tag">The Generational Curses End With You</p>
+      <footer><span class="ankh">☥</span>New Dominion Order Initiated · 963 Hz · ScrollVerse Living Archive</footer>
+    </section>
+    <p class="note">Local-first plate. Open this file offline. Frequency line is brand language, not a measured output. No treasury figures.</p>
+  </main>
+</body>
+</html>
