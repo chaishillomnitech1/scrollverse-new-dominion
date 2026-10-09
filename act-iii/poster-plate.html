@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Act III — Intervention Necessary</title>
+<style>
+  @page { size: 24in 36in; margin: 0; }
+  html, body { margin: 0; background: #07080b; color: #f3e6c4; }
+  .plate {
+    width: 900px; height: 1350px; margin: 24px auto;
+    background:
+      radial-gradient(1200px 700px at 50% 18%, rgba(18, 40, 36, 0.55), transparent 60%),
+      linear-gradient(180deg, #0c0e12 0%, #07080b 42%, #120c08 100%);
+    border: 1px solid rgba(212, 175, 95, 0.35);
+    box-shadow: 0 0 0 8px #07080b, 0 0 0 9px rgba(212, 175, 95, 0.45);
+    position: relative; overflow: hidden;
+    font-family: "Palatino Linotype", Palatino, "Times New Roman", serif;
+  }
+  .vein {
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.35;
+    background:
+      linear-gradient(115deg, transparent 40%, rgba(212,175,95,0.18) 47%, transparent 52%),
+      linear-gradient(70deg, transparent 62%, rgba(212,175,95,0.12) 66%, transparent 70%);
+  }
+  .eye {
+    position: absolute; top: 78px; left: 50%; transform: translateX(-50%);
+    width: 168px; height: 108px;
+  }
+  .water, .fire {
+    position: absolute; top: 340px; width: 280px; height: 520px; opacity: 0.85;
+  }
+  .water { left: 0; background: linear-gradient(180deg, transparent, rgba(20, 180, 190, 0.35), rgba(16, 90, 80, 0.15)); }
+  .fire { right: 0; background: linear-gradient(180deg, transparent, rgba(220, 110, 30, 0.38), rgba(120, 40, 8, 0.16)); }
+  .throne {
+    position: absolute; left: 50%; top: 430px; transform: translateX(-50%);
+    width: 280px; text-align: center; letter-spacing: 0.18em; font-size: 11px;
+    color: rgba(243, 230, 196, 0.72);
+  }
+  .copy { position: absolute; left: 64px; right: 64px; bottom: 150px; text-align: center; }
+  h1 {
+    margin: 0; font-weight: 500; letter-spacing: 0.16em; font-size: 34px;
+    color: #e8c872;
+    text-shadow: 0 1px 0 #6a5420, 0 0 18px rgba(232, 200, 114, 0.25);
+  }
+  .sub { margin-top: 18px; font-size: 18px; letter-spacing: 0.22em; }
+  .sub .w { color: #5ee0e6; }
+  .sub .f { color: #f08a3a; }
+  .tag { margin-top: 28px; font-size: 16px; letter-spacing: 0.08em; color: #f3e6c4; }
+  footer {
+    position: absolute; left: 0; right: 0; bottom: 48px; text-align: center;
+    font-size: 11px; letter-spacing: 0.2em; color: rgba(232, 200, 114, 0.8);
+  }
+  .ankh { position: absolute; left: 50%; bottom: 92px; transform: translateX(-50%); color: #e8c872; font-size: 22px; }
+  .note { max-width: 900px; margin: 0 auto 40px; font-family: Georgia, serif; color: #cbb98a; font-size: 14px; line-height: 1.5; }
+</style>
+</head>
+<body>
+  <div class="plate" role="img" aria-label="Act III poster plate">
+    <div class="vein"></div>
+    <svg class="eye" viewBox="0 0 168 108" aria-hidden="true">
+      <path d="M8 54 C40 12 128 12 160 54 C128 96 40 96 8 54 Z" fill="none" stroke="#e8c872" stroke-width="2"/>
+      <circle cx="84" cy="54" r="22" fill="#0e3d34" stroke="#5ee0e6" stroke-width="2"/>
+      <circle cx="84" cy="54" r="8" fill="#e8c872"/>
+      <path d="M20 40 C50 28 70 22 84 20" fill="none" stroke="#2ec8c0" stroke-width="0.6" opacity="0.7"/>
+      <path d="M148 40 C118 28 98 22 84 20" fill="none" stroke="#2ec8c0" stroke-width="0.6" opacity="0.7"/>
+    </svg>
+    <div class="water"></div>
+    <div class="fire"></div>
+    <div class="throne">ELDER · WHITE ROBE · GOLD SASH<br/>ORNATE THRONE · BLACK MARBLE</div>
+    <div class="copy">
+      <h1>ACT III: INTERVENTION NECESSARY</h1>
+      <div class="sub"><span class="w">WITH WATER</span> · <span class="f">BUT WITH FIRE</span></div>
+      <div class="tag">The Generational Curses End With You</div>
+    </div>
+    <div class="ankh">☥</div>
+    <footer>NEW DOMINION ORDER INITIATED · 963 HZ · SCROLLVERSE LIVING ARCHIVE</footer>
+  </div>
+  <p class="note">First-party local plate. Canonical copy only. 963 Hz is brand language, not a measured output. No treasury figures. Print from this file; do not treat a third-party host as the open.</p>
+</body>
+</html>
