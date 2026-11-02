@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 4000" width="3000" height="4000"><title>Freeing Yourself — ScrollVerse Gold Foil Poster</title>
+<defs><linearGradient id="foil" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6d1d"/><stop offset=".35" stop-color="#D4AF37"/><stop offset=".5" stop-color="#fff2b0"/><stop offset=".7" stop-color="#D4AF37"/><stop offset="1" stop-color="#8a6d1d"/></linearGradient>
+<radialGradient id="em"><stop offset="0" stop-color="#00FF88" stop-opacity=".55"/><stop offset="1" stop-color="#00FF88" stop-opacity="0"/></radialGradient></defs>
+<rect width="3000" height="4000" fill="#0A0A0A"/><g id="foil-layer-glow"><circle cx="1500" cy="1700" r="1200" fill="url(#em)"/></g>
+<g id="foil-layer-frame"><rect x="100" y="100" width="2800" height="3800" fill="none" stroke="url(#foil)" stroke-width="10"/></g>
+<g id="foil-layer-cloud" fill="url(#foil)" opacity=".85"><ellipse cx="1500" cy="2350" rx="900" ry="140"/><ellipse cx="1100" cy="2420" rx="500" ry="110"/><ellipse cx="1950" cy="2420" rx="550" ry="110"/></g>
+<g id="filaments" fill="none" stroke-width="6" opacity=".8">
+<path d="M1500 1500 C600 800,900 300,300 600" stroke="#00FF88"/>
+<path d="M1500 1500 C640 860,930 310,370 690" stroke="#D4AF37"/>
+<path d="M1500 1500 C680 920,960 320,440 780" stroke="#7c4dff"/>
+<path d="M1500 1500 C720 980,990 330,510 870" stroke="#ff4d9d"/>
+<path d="M1500 1500 C760 1040,1020 340,580 960" stroke="#4dd0ff"/>
+<path d="M1500 1500 C800 1100,1050 350,650 600" stroke="#ffd24d"/>
+<path d="M1500 1500 C840 1160,1080 360,720 690" stroke="#00FF88"/>
+<path d="M1500 1500 C880 800,1110 370,790 780" stroke="#D4AF37"/>
+<path d="M1500 1500 C920 860,1140 380,860 870" stroke="#7c4dff"/>
+<path d="M1500 1500 C960 920,1170 390,930 960" stroke="#ff4d9d"/>
+<path d="M1500 1500 C1000 980,1200 400,1000 600" stroke="#4dd0ff"/>
+<path d="M1500 1500 C1040 1040,1230 410,1070 690" stroke="#ffd24d"/>
+<path d="M1500 1500 C1080 1100,1260 420,1140 780" stroke="#00FF88"/>
+<path d="M1500 1500 C1120 1160,1290 430,1210 870" stroke="#D4AF37"/>
+<path d="M1500 1500 C1160 800,1320 440,1280 960" stroke="#7c4dff"/>
+<path d="M1500 1500 C1200 860,1350 450,1350 600" stroke="#ff4d9d"/>
+<path d="M1500 1500 C1240 920,1380 460,1420 690" stroke="#4dd0ff"/>
+<path d="M1500 1500 C1280 980,1410 470,1490 780" stroke="#ffd24d"/>
+<path d="M1500 1500 C1320 1040,1440 480,1560 870" stroke="#00FF88"/>
+<path d="M1500 1500 C1360 1100,1470 490,1630 960" stroke="#D4AF37"/>
+<path d="M1500 1500 C1400 1160,1500 500,1700 600" stroke="#7c4dff"/>
+<path d="M1500 1500 C1440 800,1530 510,1770 690" stroke="#ff4d9d"/>
+<path d="M1500 1500 C1480 860,1560 520,1840 780" stroke="#4dd0ff"/>
+<path d="M1500 1500 C1520 920,1590 530,1910 870" stroke="#ffd24d"/>
+<path d="M1500 1500 C1560 980,1620 540,1980 960" stroke="#00FF88"/>
+<path d="M1500 1500 C1600 1040,1650 550,2050 600" stroke="#D4AF37"/>
+<path d="M1500 1500 C1640 1100,1680 560,2120 690" stroke="#7c4dff"/>
+<path d="M1500 1500 C1680 1160,1710 570,2190 780" stroke="#ff4d9d"/>
+<path d="M1500 1500 C1720 800,1740 580,2260 870" stroke="#4dd0ff"/>
+<path d="M1500 1500 C1760 860,1770 590,2330 960" stroke="#ffd24d"/>
+<path d="M1500 1500 C1800 920,1800 600,2400 600" stroke="#00FF88"/>
+<path d="M1500 1500 C1840 980,1830 610,2470 690" stroke="#D4AF37"/>
+<path d="M1500 1500 C1880 1040,1860 620,2540 780" stroke="#7c4dff"/>
+<path d="M1500 1500 C1920 1100,1890 630,2610 870" stroke="#ff4d9d"/>
+<path d="M1500 1500 C1960 1160,1920 640,2680 960" stroke="#4dd0ff"/>
+<path d="M1500 1500 C2000 800,1950 650,2750 600" stroke="#ffd24d"/>
+</g>
+<g id="sage" fill="#0A0A0A" stroke="url(#foil)" stroke-width="8"><circle cx="1500" cy="1380" r="110"/><path d="M1380 1500 Q1500 1450 1620 1500 L1700 2000 Q1500 2100 1300 2000Z"/><path d="M1300 2000 Q1500 2250 1700 2000 L1800 2300 L1200 2300Z"/></g>
+<text x="1500" y="300" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="48" letter-spacing="14" fill="#00FF88">@JAYCOBYART</text>
+<text x="1500" y="2750" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="130" font-weight="700" fill="url(#foil)">THERE WAS NEVER</text>
+<text x="1500" y="2900" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="130" font-weight="700" fill="url(#foil)">A LIMITATION —</text>
+<text x="1500" y="3050" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="130" font-weight="700" fill="url(#foil)">ONLY THE IDEA</text>
+<text x="1500" y="3200" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="130" font-weight="700" fill="url(#foil)">OF ONE</text>
+<text x="1500" y="3650" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="60" letter-spacing="20" fill="#D4AF37">SCROLLVERSE</text><text x="1500" y="3740" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="36" fill="#00FF88">structure like pyramids · freedom like wind</text></svg>
