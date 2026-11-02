@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 
 interface LiveFeedMetrics {
-  vaultNativeBalance: string;
-  networkNodeStatus: 'ONLINE' | 'DEGRADED' | 'OFFLINE';
-  activeRepomirrorsCount: number;
-  systemCoherenceWindow: number;
-  lastUpdatedTimestamp: string;
+  vaultNativeBalance: string | null;
+  networkNodeStatus: 'CONNECTING' | 'ONLINE' | 'DEGRADED' | 'OFFLINE';
+  dataSource: 'Polygon public RPC';
+  lastUpdatedTimestamp: string | null;
+  lastError: string | null;
 }
 
 export function useLiveFeed() {
@@ -20,41 +20,38 @@ export function useLiveFeed() {
   ];
 
   const [metrics, setMetrics] = useState<LiveFeedMetrics>({
-    vaultNativeBalance: "0.0000",
-    networkNodeStatus: 'ONLINE',
-    activeRepomirrorsCount: 141,
-    systemCoherenceWindow: 864.4,
-    lastUpdatedTimestamp: new Date().toISOString()
+    vaultNativeBalance: null,
+    networkNodeStatus: 'CONNECTING',
+    dataSource: 'Polygon public RPC',
+    lastUpdatedTimestamp: null,
+    lastError: null
   });
 
   const queryOnChainVaultWithFallback = async () => {
-    let success = false;
-    
-    for (const rpcUrl of RPC_FALLBACK_NODES) {
-      if (success) break;
+    for (const [index, rpcUrl] of RPC_FALLBACK_NODES.entries()) {
       try {
         const provider = new ethers.JsonRpcProvider(rpcUrl);
         const balanceWei = await provider.getBalance(VAULT_ENDPOINT);
         const formattedBalance = ethers.formatEther(balanceWei);
 
-        setMetrics(prev => ({
-          ...prev,
-          vaultNativeBalance: Number(formattedBalance).toFixed(4),
-          networkNodeStatus: 'ONLINE',
-          lastUpdatedTimestamp: new Date().toISOString()
-        }));
-        success = true;
-        console.log(`📊 [Live Vault Engine]: Telemetry synced — Balance: ${formattedBalance} MATIC`);
-        break;
-      } catch (error) {
-        console.warn(`⚠️ Gateway latency at: ${rpcUrl}. Attempting fallback routing...`);
+        setMetrics({
+          vaultNativeBalance: formattedBalance,
+          networkNodeStatus: index === 0 ? 'ONLINE' : 'DEGRADED',
+          dataSource: 'Polygon public RPC',
+          lastUpdatedTimestamp: new Date().toISOString(),
+          lastError: null
+        });
+        return;
+      } catch {
+        continue;
       }
     }
 
-    if (!success) {
-      setMetrics(prev => ({ ...prev, networkNodeStatus: 'OFFLINE' }));
-      console.error("❌ All RPC endpoints exhausted. System degraded.");
-    }
+    setMetrics(prev => ({
+      ...prev,
+      networkNodeStatus: 'OFFLINE',
+      lastError: 'Unable to reach the configured Polygon RPC endpoints.'
+    }));
   };
 
   useEffect(() => {

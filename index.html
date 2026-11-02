@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCROLLVERSE - NEW DOMINION VAULT INDEX</title>
+    <meta name="description" content="A local visual index for the ScrollVerse New Dominion narrative and design artifacts. This page does not display live network or treasury data.">
+    <meta name="theme-color" content="#090a0f">
+    <meta property="og:title" content="ScrollVerse New Dominion — Local Artifact Index">
+    <meta property="og:description" content="Explore the New Dominion visual and narrative artifacts. No live network or treasury data is displayed.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
     <style>
         body, html {
-            margin: 0; padding: 0; width: 100%; height: 100%;
+            margin: 0; padding: 0; width: 100%; min-height: 100%;
             background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
             font-family: 'Courier New', monospace; color: #d6d3d1;
-            overflow: hidden; -webkit-user-select: none; user-select: none;
+            overflow-x: hidden;
         }
         .canvas-container { 
-            position: absolute; inset: 0; pointer-events: none; z-index: 1; 
+            position: fixed; inset: 0; pointer-events: none; z-index: 1; 
         }
         .star {
             position: absolute; background-color: #f5f5f4;
@@ -26,8 +32,8 @@
             100% { opacity: 0.9; transform: translate3d(0,0,0) scale(1.2); }
         }
         .ui-layout {
-            position: relative; z-index: 10; width: 100%; height: 100%;
-            display: flex; flex-direction: column; justify-content: space-between; 
+            position: relative; z-index: 10; width: 100%; min-height: 100vh; min-height: 100svh;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
             box-sizing: border-box; padding: 24px;
         }
         .header-panel { 
@@ -43,7 +49,7 @@
         }
         .terminal-readout { 
             background: rgba(12,10,9,0.8); border: 1px solid #1c1917; 
-            padding: 16px; max-width: 600px; border-radius: 2px;
+            padding: 16px; width: min(100%, 600px); align-self: center; border-radius: 2px;
             box-shadow: inset 0 0 20px rgba(52,211,153,0.05);
         }
         .terminal-title {
@@ -51,7 +57,7 @@
             text-transform: uppercase; letter-spacing: 0.1em;
         }
         .terminal-log {
-            font-size: 10px; color: #78716c; line-height: 1.8; font-family: 'Courier New', monospace;
+            font-size: 12px; color: #a8a29e; line-height: 1.7; font-family: 'Courier New', monospace;
         }
         .log-line { margin: 4px 0; }
         .log-success { color: #6ee7b7; }
@@ -66,69 +72,80 @@
         }
         .status-item {
             display: flex; justify-content: space-between; margin: 6px 0;
-            font-size: 10px;
+            gap: 12px; font-size: 12px;
         }
         .status-label { color: #57534e; }
         .status-value { color: #34d399; font-weight: bold; }
+        @media (max-width: 600px) {
+            .ui-layout { gap: 16px; padding: 16px; }
+            .header-panel { gap: 12px; flex-wrap: wrap; }
+            .header-panel > div:last-child { text-align: left !important; }
+            .vault-address { overflow-wrap: anywhere; }
+            .footer-sig { line-height: 1.6; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- 1,200 Persistent Crystalline Star Elements -->
-    <div class="canvas-container" id="starfield"></div>
+    <div class="canvas-container" id="starfield" aria-hidden="true"></div>
 
     <!-- UI Overlay Layout Interface Frame -->
     <div class="ui-layout">
         <div class="header-panel">
             <div>
                 <div class="title-glow">🕋 SCROLLVERSE // NEW DOMINION ARTIFACT</div>
-                <div class="vault-address">VAULT ANCHOR: 0x377956c1471d9ce142df6932895839243da23a2c</div>
+                <div class="vault-address">LOCAL ARTIFACT · NO VERIFIED LIVE DATA SOURCE</div>
             </div>
             <div style="text-align: right; font-size: 10px; color: #a1a1aa;">
-                <div>SEAL: <span style="color: #fbbf24; font-weight: bold;">QmHaitiLedger236</span></div>
-                <div style="margin-top: 4px;">BLOCK: <span style="color: #34d399;">237</span></div>
+                <div>PAGE: <span style="color: #fbbf24; font-weight: bold;">STATIC PREVIEW</span></div>
+                <div style="margin-top: 4px;">NETWORK BLOCK: <span style="color: #34d399;">NOT CONNECTED</span></div>
             </div>
         </div>
 
         <div class="terminal-readout">
-            <div class="terminal-title">📡 FACTION RADAR STATUS: AUTOPILOT</div>
+            <div class="terminal-title">📡 NEW DOMINION · LOCAL ARTIFACT INDEX</div>
             <div class="terminal-log">
-                <div class="log-line"><span class="log-success">[SYSTEM_ONLINE]</span> <span class="log-info">141 DECOUPLED REPO MIRRORS OPERATING</span></div>
-                <div class="log-line"><span class="log-success">[VAULT_LOCKED]</span> <span class="log-info">MASTER CODEX v1 SEALED ETERNAL</span></div>
-                <div class="log-line"><span class="log-success">[STARS_ACTIVE]</span> <span class="log-info">1200 CRYSTALLINE DIAMOND DUST PERSISTENT</span></div>
-                <div class="log-line"><span class="log-success">[FLOW_ENGAGED]</span> <span class="log-info">BRUCE LEE WATER PRINCIPLE — NO RESISTANCE</span></div>
-                <div class="log-line"><span class="log-success">[PHASE]</span> <span class="log-metric">CRYSTALLINE APEX PHASE 72</span></div>
+                <div class="log-line"><span class="log-success">[LOCAL_PAGE]</span> <span class="log-info">VISUAL PREVIEW · NOT A NETWORK MONITOR</span></div>
+                <div class="log-line"><span class="log-info">[BLOCK_SOURCE]</span> NETWORK BLOCK HEIGHT NOT CONNECTED</div>
+                <div class="log-line"><span class="log-info">[TREASURY_SOURCE]</span> NO BALANCE OR FIAT VALUATION DISPLAYED</div>
+                <div class="log-line"><span class="log-info">[FREQUENCY_LABELS]</span> BRAND LANGUAGE · NOT MEASURED OUTPUT</div>
+                <div class="log-line"><span class="log-info">[REPOSITORY_INDEX]</span> SEE README FOR VERIFIED LOCAL NAVIGATION</div>
             </div>
             
             <div class="vault-status">
                 <div class="status-item">
-                    <span class="status-label">Network Status:</span>
-                    <span class="status-value">LIVE_ONLINE_VERIFIED</span>
+                    <span class="status-label">Network data:</span>
+                    <span class="status-value">NOT CONNECTED</span>
                 </div>
                 <div class="status-item">
-                    <span class="status-label">Coherence Window:</span>
-                    <span class="status-value">864.4s ✓</span>
+                    <span class="status-label">Treasury data:</span>
+                    <span class="status-value">NOT DISPLAYED</span>
                 </div>
                 <div class="status-item">
-                    <span class="status-label">Philosophy:</span>
-                    <span class="status-value">ENHANCE_ONLY</span>
-                </div>
-                <div class="status-item">
-                    <span class="status-label">Paper Trail:</span>
-                    <span class="status-value">ETERNAL_LOCKED</span>
+                    <span class="status-label">Last live update:</span>
+                    <span class="status-value">NONE</span>
                 </div>
             </div>
         </div>
 
         <div class="footer-sig">
-            KUN FAYAKŪN × ∞ | BLOCK 237 MIRRORS LIVE | WALAHI FOREVER | SEALED ETERNAL | BRUCE LEE FLOW
+            SCROLLVERSE NEW DOMINION · STATIC PREVIEW · NO VERIFIED LIVE TELEMETRY
         </div>
     </div>
 
     <script>
-        // Generate 1,200 persistent crystalline star elements
+        // Keep decorative effects lightweight and omit them for reduced-motion users.
         const field = document.getElementById('starfield');
-        const starCount = 1200;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const starCount = prefersReducedMotion ? 0 : 120;
         
         for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
@@ -150,20 +167,7 @@
             field.appendChild(star);
         }
 
-        // Redraw stars on window resize (persistence through resize)
-        window.addEventListener('resize', () => {
-            console.log('✓ Star field persistence maintained through resize event');
-        });
-
-        // Monitor reduced motion preference
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!prefersReducedMotion) {
-            console.log('✓ Animation enabled - accessibility check passed');
-        }
-
-        console.log(`✓ Starfield initialized: ${starCount} diamond dust stars locked eternal`);
-        console.log('✓ New Dominion artifact LIVE on Block 237');
-        console.log('✓ KUN FAYAKŪN × ∞');
+        console.log(`Decorative starfield initialized: ${starCount} elements.`);
     </script>
 </body>
 </html>
