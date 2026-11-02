@@ -47,7 +47,7 @@ export function useLiveFeed() {
       }
     }
 
-    setMetrics(prev => ({
+    setMetrics((prev: LiveFeedMetrics) => ({
       ...prev,
       networkNodeStatus: 'OFFLINE',
       lastError: 'Unable to reach the configured Polygon RPC endpoints.'

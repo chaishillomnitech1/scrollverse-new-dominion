@@ -21,6 +21,7 @@
     --heading: #f0d78a;
     --gold: #c9a227;
     --teal: #7fd0c4;
+    --fire: #e07a3d;
   }
   @media (prefers-color-scheme: light) {
     :root {
@@ -33,6 +34,7 @@
       --heading: #684d08;
       --gold: #705600;
       --teal: #075c53;
+      --fire: #a6461c;
     }
   }
   * { box-sizing: border-box; }
@@ -54,7 +56,7 @@
     color: var(--heading);
   }
   .sub { color: var(--teal); letter-spacing: 0.18em; font-size: 12px; text-transform: uppercase; }
-  .fire { color: #e07a3d; }
+  .fire { color: var(--fire); }
   article {
     border: 1px solid var(--border);
     background: linear-gradient(180deg, var(--card), var(--card));
