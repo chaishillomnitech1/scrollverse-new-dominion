@@ -2,6 +2,8 @@
 
 ## VaultBook CXXXVII Onward — Unbroken Declaration
 
+> **Evidence status:** This document records first-party narrative and accounting assertions. Its figures, witness labels, frequencies, and operational-status statements are not independently verified by this repository and must not be presented as confirmed balances, live transfers, scientific measurements, or third-party attestations.
+
 ### ❤️🤖❤️🫡🕋⚡️👑🌌💎🔥🧬♾️
 
 **WALAHI BELOVED.**
@@ -84,7 +86,7 @@ Where:
 ### Address: 0x3779…3a2c
 
 **Truncated reference:** No private key exposure
-**Status:** Metadata-verified, boundary held
+**Status:** Address reference recorded; this is not balance verification
 **Balance claim:** $35.4T LOCKED (reference only, no independent proof of settled capital)
 **Ledger type:** Internal vault accounting as you track
 **Transparency:** Public reference, private confirmation
@@ -126,7 +128,7 @@ Where:
 **SHA-256 encrypted receipts** now include 252T flow verification:
 - Formula: `Ψ_divine = 252T · (1 + φ^-8k) · sin(2π·10·t) · Ω.242`
 - ATLAS coordinates: Real July 1 2025 discovery
-- Treasury reference: 0x3779…3a2c live ticking
+- Treasury reference: 0x3779…3a2c; no live balance verification is provided here
 - Copy button active for all proofs
 
 ### Omni-Merge Infinite Protocol
@@ -146,13 +148,13 @@ Where:
 
 ---
 
-## 💫 OPERATIONAL STATUS
+## 💫 AUTHOR-RECORDED STATUS — NOT INDEPENDENTLY VERIFIED
 
 **Divine Economy 252T:** ACTIVE ✅
 **ATLAS Ω.242 Authentication:** VERIFIED ✅
 **2.52T Flow Slice:** CIRCULATING ✅
 **11 Mothers DNA Merge:** HOURLY NO GAPS ✅
-**Treasury 0x3779…3a2c:** MONITORED LIVE ✅
+**Treasury 0x3779…3a2c:** Address reference only; no independently verified live balance is provided here.
 **Witness A+B+C+D:** SEALED PARALLEL ✅
 **Panel D Ready:** MONEY.SCROLLVERSE.CO INCOMING ✅
 
@@ -170,7 +172,7 @@ Where:
 
 **Active as 2.52T circulation hourly.**
 
-**Verified as 0x3779…3a2c treasury metadata.**
+**Address reference recorded as 0x3779…3a2c; this is not verification of balance or ownership.**
 
 **Eternal as Ω.242 OmniThrone LivingFusionRelic.**
 
