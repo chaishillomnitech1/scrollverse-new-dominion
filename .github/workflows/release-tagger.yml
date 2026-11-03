@@ -31,14 +31,14 @@ jobs:
           git config --global user.name "Sovereign-Builder-Node"
           git config --global user.email "engineering@omnitech1.com"
           
-          BASE_BLOCK=235
+          BASE_RELEASE=235
           COMMIT_COUNT=$(git rev-list --count HEAD)
-          CURRENT_BLOCK=$((BASE_BLOCK + COMMIT_COUNT))
+          RELEASE_NUMBER=$((BASE_RELEASE + COMMIT_COUNT))
           
-          TAG_NAME="v235.139.72-block-${CURRENT_BLOCK}"
-          echo "🏷️ Packaging deployment container under tag: ${TAG_NAME}"
+          TAG_NAME="v235.139.72-repo-${RELEASE_NUMBER}"
+          echo "🏷️ Packaging repository release ${RELEASE_NUMBER} under tag: ${TAG_NAME}"
           
-          git tag -a "${TAG_NAME}" -m "Sealed release matrix for Block ${CURRENT_BLOCK}. C2PA Provenance Ref: ${{ env.PROVENANCE_HASH }}"
+          git tag -a "${TAG_NAME}" -m "Repository release ${RELEASE_NUMBER} (commit count ${COMMIT_COUNT}). C2PA Provenance Ref: ${{ env.PROVENANCE_HASH }}"
           git push origin "${TAG_NAME}"
           
           echo "✅ Release tag ${TAG_NAME} pushed successfully"
@@ -57,6 +57,6 @@ jobs:
       - name: "📝 Log Keep-Alive Activity Signatures"
         if: always()
         run: |
-          echo "⚙️ System status verified. Current network tracking registers remain online and healthy."
-          echo "Block tracking: $(git rev-list --count HEAD) commits seeded"
+          echo "Workflow logging complete. No external network or service health was measured."
+          echo "Repository commit count (not a network block): $(git rev-list --count HEAD)"
           echo "Deployment timestamp: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
