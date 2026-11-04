@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>333 MASTERBOARD — Archive Terminal</title>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#0A0A0A;--gold:#D4AF37;--em:#00FF88;--ink:#e9e4d4;--cy:#22d3ee;--gap:clamp(16px,3vw,32px)}
+html,body{margin:0;overflow-x:hidden}
+body{background:radial-gradient(circle at 20% 10%,#1d1b16 0,transparent 45%),radial-gradient(circle at 80% 90%,#16201b 0,transparent 45%),var(--bg);color:var(--ink);font:16px/1.6 Georgia,serif}
+body::before{content:"";position:fixed;inset:0;z-index:-1;opacity:.07;pointer-events:none;
+background:repeating-conic-gradient(from 22.5deg at 50% 50%,var(--gold) 0 2deg,transparent 2deg 45deg);background-size:120px 120px}
+main{max-width:1100px;margin:0 auto;padding:var(--gap)}
+h1{color:var(--gold);letter-spacing:.12em;font-size:clamp(1.5rem,5vw,2.4rem);margin:0 0 8px;overflow-wrap:anywhere}
+h2{color:var(--gold);font-size:1.15rem;margin:0 0 12px}
+p,li{overflow-wrap:anywhere}
+.sub{color:#b9b39e;margin:0 0 var(--gap)}
+.panel{position:relative;background:linear-gradient(145deg,#15130f,#0d0d0d);border:1px solid #3a3320;border-radius:10px;padding:var(--gap);margin-bottom:var(--gap)}
+.panel::before,.panel::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--em)}
+.panel::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.panel::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.ticker{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:var(--gap)}
+.ticker span{flex:1 1 140px;border:1px solid #3a3320;border-radius:6px;padding:8px 12px;color:var(--gold);font:13px monospace;overflow-wrap:anywhere}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:var(--gap)}
+.grid .panel{margin:0}
+canvas{width:100%;height:auto;max-width:360px;display:block;margin:0 auto;touch-action:none;cursor:grab;background:#0b0b0b;border-radius:8px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+button,input{font:inherit;border-radius:6px;border:1px solid #3a3320;background:#111;color:var(--ink);padding:6px 12px}
+button{cursor:pointer}button.on{border-color:var(--em);color:var(--em)}
+input{width:100%;margin-bottom:12px}
+.item{border-top:1px solid #2a2618;padding:12px 0;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:flex-start}
+.item>div{flex:1 1 240px}
+.badge{font:700 11px monospace;padding:2px 8px;border-radius:99px;color:#000}
+.VERIFIED{background:var(--em)}.PROJECT-REPORTED{background:var(--gold)}.SYMBOLIC{background:#c084fc}.PENDING{background:#ef4444;color:#fff}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0b0b0b;padding:12px;border-radius:6px;font-size:13px;margin:8px 0}
+.hexes{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.hex{width:56px;height:64px;background:var(--cy);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);opacity:.8;display:flex;align-items:center;justify-content:center;color:#001;font:11px monospace;text-align:center}
+.hex.c{background:var(--gold)}
+.note{color:#b9b39e;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>333 MASTERBOARD</h1>
+<p class="sub">Archive terminal — preserve the original, recover the titles, connect the evidence. Static page: in-memory state, no backend, no persistence, no live data.</p>
+<div class="ticker">
+<span>3:33 · 333 = completion (SYMBOLIC)</span>
+<span>396 / 417 / 432 / 528 / 639 / 777 / 888 / 963 / 999 Hz (SYMBOLIC)</span>
+<span>Treasury figures: PROJECT-REPORTED</span>
+</div>
+
+<div class="grid">
+<section class="panel"><h2>Cuboctahedron — Vector Equilibrium</h2>
+<canvas id="cv" width="360" height="360" aria-label="Rotatable cuboctahedron wireframe"></canvas>
+<p class="note" id="geo"></p>
+<button id="spin" class="on">Auto-spin: on</button></section>
+<section class="panel"><h2>Hexagonal Principle (central places)</h2>
+<div class="hexes" id="hx"></div>
+<p class="note">Die Versorgung · Die Zuordnung · Der Verkehr — structural efficiency. Archetype of the net; a symbolic/organisational model, not a measured result.</p></section>
+</div>
+<div style="height:var(--gap)"></div>
+
+<section class="panel"><h2>Evidence classification</h2>
+<p class="note">VERIFIED = independently retrieved or computed. This page only computes the geometry itself; SHAs are listed as supplied and must be re-retrieved before being relied on. A git commit is traceable, not a guarantee of permanent immutability.</p>
+<input id="q" placeholder="Search evidence…" aria-label="Search evidence">
+<div class="tabs" id="tabs"></div>
+<div id="list"></div></section>
+
+<section class="panel"><h2>SQL correction — seven_cities_sync.sql</h2>
+<p class="note">Original query chains CROSS JOINs, producing Cartesian combinations rather than verified relationships. Status: PENDING until the real schema and join keys are supplied.</p>
+<pre>-- ORIGINAL (flagged: CARTESIAN COMBINATIONS)
+SELECT ... FROM cities CROSS JOIN frequencies CROSS JOIN treasury;</pre>
+<pre>-- CORRECTED PATTERN (placeholder keys — schema required)
+SELECT c.name, f.hz, t.balance
+FROM cities c
+LEFT JOIN frequencies f ON f.city_id = c.id
+LEFT JOIN treasury t ON t.city_id = c.id;</pre></section>
+
+<section class="panel"><h2>Next step</h2>
+<p>Extend the master evidence index with <code>333_GEOMASTERY_TRANSMISSION.md</code> (template in this repository), keeping mathematical, symbolic and technical claims separate.</p></section>
+</main>
+<script>
+const EV=[
+["VERIFIED","Cuboctahedron: 12 vertices, 8 triangles, 6 squares, 24 edges, kissing number 12, edge = radius (computed on this page)"],
+["PROJECT-REPORTED","6 repos with SHAs f038c71d, ed1af532, 67ebe748, 3b12743b, 3677b1c0, 833d099c; commit c5c6f1ca917e6bcb5a533a4b0590ad93266fe559 (FIRST_KNIGHT_EVIDENCE_INDEX.md) — re-retrieve to verify","c5c6f1ca917e6bcb5a533a4b0590ad93266fe559"],
+["PROJECT-REPORTED","54 pipelines; 91 repos fused hourly; 590 files / 1740 asserts; 49 positions CHX; treasury $35.4T"],
+["SYMBOLIC","12 Guardians = 12 vertices; First Knight Covenant = Vector Equilibrium; 333 = completion; 396–999 Hz mapped to cities and chakras; hexagonal archetype; One Love"],
+["PENDING","Smart contracts deployed and functioning; treasury accessible funds; on-chain verification of 0x377956c1471d9ce142df6932895839243da23a2c"],
+["PENDING","Guardian registry 144K; PSYCHE16 45k+ twins; file inventories; test logs; 75-repo sync map; Block 170 mint; Nano SKI 1.4T"],
+["PENDING","Working master audit SQL (schema and join keys required)"]
+];
+let f="ALL",s="";
+const $=id=>document.getElementById(id);
+function render(){
+ $("tabs").innerHTML="";
+ ["ALL","VERIFIED","PROJECT-REPORTED","SYMBOLIC","PENDING"].forEach(k=>{
+  const b=document.createElement("button");b.textContent=k;b.className=k===f?"on":"";
+  b.onclick=()=>{f=k;render()};$("tabs").append(b)});
+ $("list").innerHTML="";
+ EV.filter(e=>(f==="ALL"||e[0]===f)&&e[1].toLowerCase().includes(s)).forEach(e=>{
+  const d=document.createElement("div");d.className="item";
+  const bd=document.createElement("span");bd.className="badge "+e[0];bd.textContent=e[0];
+  const t=document.createElement("div");t.textContent=e[1];
+  d.append(bd,t);
+  if(e[2]){const c=document.createElement("button");c.textContent="Copy SHA";
+   c.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(e[2]);d.append(c)}
+  $("list").append(d)});
+}
+$("q").oninput=e=>{s=e.target.value.toLowerCase();render()};
+render();
+// hex grid: 1 + 6 + 12
+const rows=[2,3,4,3,2];
+rows.forEach((n,i)=>{const r=document.createElement("div");r.style.cssText="display:flex;gap:6px;width:100%;justify-content:center";
+ for(let j=0;j<n;j++){const h=document.createElement("div");h.className="hex"+(i===2&&j===1?" c":"");h.textContent=i===2&&j===1?"center":"";r.append(h)}
+ $("hx").append(r)});
+// cuboctahedron
+const V=[];for(const a of[-1,1])for(const b of[-1,1]){V.push([a,b,0],[a,0,b],[0,a,b])}
+const E=[];for(let i=0;i<12;i++)for(let j=i+1;j<12;j++){const d=V[i].reduce((s,v,k)=>s+(v-V[j][k])**2,0);if(Math.abs(d-2)<1e-9)E.push([i,j])}
+$("geo").textContent=`Computed: ${V.length} vertices, ${E.length} edges, edge = √2 = radius √2 (center to vertex).`;
+const cv=$("cv"),cx=cv.getContext("2d");let ax=.5,ay=.6,spin=true,drag=null;
+function draw(){
+ cx.clearRect(0,0,360,360);
+ const P=V.map(([x,y,z])=>{let c=Math.cos(ay),s=Math.sin(ay);[x,z]=[x*c+z*s,-x*s+z*c];c=Math.cos(ax);s=Math.sin(ax);[y,z]=[y*c-z*s,y*s+z*c];return[180+x*85,180+y*85,z]});
+ cx.strokeStyle="#D4AF37";cx.lineWidth=1.5;
+ E.forEach(([i,j])=>{cx.beginPath();cx.moveTo(P[i][0],P[i][1]);cx.lineTo(P[j][0],P[j][1]);cx.stroke()});
+ cx.fillStyle="#00FF88";P.forEach(p=>{cx.beginPath();cx.arc(p[0],p[1],4,0,7);cx.fill()});
+ cx.fillStyle="#fff";cx.beginPath();cx.arc(180,180,5,0,7);cx.fill();
+ if(spin&&!drag)ay+=.008;requestAnimationFrame(draw)}
+cv.onpointerdown=e=>{drag=[e.clientX,e.clientY];cv.setPointerCapture(e.pointerId)};
+cv.onpointermove=e=>{if(!drag)return;ay+=(e.clientX-drag[0])*.01;ax+=(e.clientY-drag[1])*.01;drag=[e.clientX,e.clientY]};
+cv.onpointerup=()=>drag=null;
+$("spin").onclick=e=>{spin=!spin;e.target.textContent="Auto-spin: "+(spin?"on":"off");e.target.className=spin?"on":""};
+draw();
+</script>
+</body>
+</html>

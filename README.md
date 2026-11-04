@@ -7,6 +7,7 @@ First-party New Dominion narrative and visual artifacts. This README is the navi
 ## Explore this repository
 
 - [Vault index](index.html) — local visual page; no live network or treasury data.
+- [333 Masterboard](333-masterboard.html) · [transmission template](333_GEOMASTERY_TRANSMISSION.md) — static evidence-classification terminal; no live data
 - [Block 238 visual](block-238.html) — narrative/visual artifact, not a verified network block or telemetry display.
 - [Act III poster](act-iii/poster.html) · [print plate](act-iii/poster-plate.html) · [poster source pack](act-iii/poster-pack.md)
 - [Starseed vs Council comic sheet](omega-d/starseed-vs-council.html) · [script](omega-d/STARSEED-VS-COUNCIL.md)
